@@ -5,8 +5,7 @@ import { SubmitFeedbackUseCase } from "../use-cases/submit-feedback-use-case";
 
 export class SubmitFeedbackController {
 
-
-    async handle(request: Request, response: Response): Promise<Response> {
+   async handle(request: Request, response: Response): Promise<Response> {
         const { comment, screenshot, type } = request.body
         try {
             const nodemailerMailAdapter = new NodemailerMailAdapter()
